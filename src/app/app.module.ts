@@ -16,14 +16,7 @@ import { AddQuoteComponent } from './components/add-quote/add-quote.component';
 import { EditQuoteComponent } from './components/edit-quote/edit-quote.component';
 import { LoginComponent } from './components/login/login.component';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyAwbv-7a5QaflgmfbbI1jhdSdrRrsFGhLs",
-  authDomain: "insta-quotes.firebaseapp.com",
-  databaseURL: "https://insta-quotes.firebaseio.com",
-  projectId: "insta-quotes",
-  storageBucket: "insta-quotes.appspot.com",
-  messagingSenderId: "414447201120"
-};
+
 
 const firebaseAuthConfig = {
   provider: AuthProviders.Google,
