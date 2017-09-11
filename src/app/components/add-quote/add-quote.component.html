@@ -1,3 +1,28 @@
-<p>
-  add-quote works!
-</p>
+<a [routerLink]="['/quotes-list']">Back</a>
+<br />
+<h2 class="page-header">Add a Quote</h2>
+<form (submit)="onAddSubmit()">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" type="text" [(ngModel)]="title" name="title">
+  </div>
+  <div class="form-group">
+  <div class="form-group">
+  <label for="sel1">Select Category:</label>
+  <select class="form-control" [(ngModel)]="category" name="category" required>
+    <option></option>
+    <option>Inspirational</option>
+    <option>Motivational</option>
+    <option>Love</option>
+    <option>Life</option>
+    <option>Funny</option>
+    <option>Proverbs</option>
+  </select>
+</div>
+  </div>
+  <div class="form-group">
+    <label>Image Url</label>
+    <input class="form-control" type="text" [(ngModel)]="imageUrl" name="title" imageUrl>
+  </div>
+  <input type="submit" value="submit" class="btn btn-success">
+</form>
