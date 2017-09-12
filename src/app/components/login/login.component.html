@@ -10,9 +10,9 @@
 
     <form class="form-signin" (submit)="loginWithEmail($event, email.value, password.value)">
       <label for="email" class="sr-only">Email address</label>
-      <input #email type="email" id="email" class="form-control" placeholder="Email address" required="">
+      <input #email type="email" id="email" class="form-control" placeholder="Email address" required="required">
       <label for="password" class="sr-only">Password</label>
-      <input #password type="password" id="password" class="form-control" placeholder="Password" required="">
+      <input #password type="password" id="password" class="form-control" placeholder="Password" required="required">
       <br>
       <button class="btn btn-md btn-primary btn-block" type="submit">Sign in</button>
     </form>
