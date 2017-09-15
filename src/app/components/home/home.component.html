@@ -1,3 +1,32 @@
-<p>
-  home works!
-</p>
+<div class="container">
+
+  <div class="jumbotron text-center">
+    <div class="container">
+      <div class="col-md-12">
+        <a href="#" class="navbar-center"><img src="assets/img/jombutron-insta-quote-icon.png"></a>
+
+      </div>
+      <br /> <br /><br />
+      <div class="col-md-12">
+        <p></p>
+        <p>Insta Quotes is an app that let you share image quotes with your friends in social media.</p>
+      </div>
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.kastriotdreshaj.instaquotesproverbs" class="navbar-right"><img src="assets/img/Play-Store.png"></a>
+        </div>
+        <div class="col-md-6">
+          <a target="_blank" href="https://itunes.apple.com/us/app/insta-quotes-proverbs/id1281924160?mt=8" class="navbar-left"><img src="assets/img/App-Store.png"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-12">
+    <div *ngFor="let listing of listings">
+      <div ng-class="{'clearfix': $index%3 === 0}"></div>
+      <div class="col-md-4">
+        <p><img src={{listing.imageUrl}} class="img-responsive" alt="Responsive image" /></p>
+      </div>
+    </div>
+  </div>
