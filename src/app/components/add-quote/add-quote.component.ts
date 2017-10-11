@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FirebaseService} from '../../services/firebase.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-quote',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddQuoteComponent implements OnInit {
 
-  constructor() { }
+  title:any;
+  category:any;
+  imageUrl:any;
+
+  constructor(
+    private firebaseService:FirebaseService,
+    private router:Router
+  ) { }
+
 
   ngOnInit() {
   }
 
+  onAddSubmit(){
+    let listing = {
+      title: this.title,
+      category: this.category,
+      imageUrl: this.imageUrl,
+      createdAt: Date.now()
+    }
+
+    this.firebaseService.addQuote(listing);
+
+    this.router.navigate(['quotes-list']);
+  }
 }
