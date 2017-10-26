@@ -1,3 +1,19 @@
-<p>
-  quotes-list works!
-</p>
+<div class="container">
+
+  <div *ngFor="let listing of listings">
+    <div class="row top-buffer col-md-12">
+      <div class="col-md-3">
+        <p><img src={{listing.imageUrl}} class="img-responsive" alt="Responsive image" /></p>
+      </div>
+      <p class="col-md-7">{{listing.title}}</p>
+      <a class="col-md-1 btn btn-default" [routerLink]="['/edit-quote/'+listing.$key]">EDIT</a>
+      <a (click)="onDeleteClick(listing.$key)" class="col-md-1 btn btn-danger" >DELETE</a>
+
+    </div>
+    <div class="col-xs-12">
+      <hr>
+    </div>
+    <br /> <br /><br />
+  </div>
+
+</div>
