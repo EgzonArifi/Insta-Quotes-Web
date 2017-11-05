@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 import * as firebase from 'firebase';
+import "rxjs/add/operator/map";
 
 @Injectable()
 export class FirebaseService {
@@ -26,7 +27,10 @@ export class FirebaseService {
   }
   //Get list with quotes
   getListings() {
-    return this.listings;
+    // return this.listings;
+      return this.listings.map(posts => {
+         return posts.reverse();
+     });
   }
 
   //quote to database
@@ -53,4 +57,6 @@ interface Listing {
   title?: string;
   category?: string;
   imageUrl?: string;
+  createdAt?: Date;
+
 }
