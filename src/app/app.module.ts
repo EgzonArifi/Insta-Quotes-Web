@@ -15,7 +15,7 @@ import { QuoteComponent } from './components/quote/quote.component';
 import { AddQuoteComponent } from './components/add-quote/add-quote.component';
 import { EditQuoteComponent } from './components/edit-quote/edit-quote.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 
 const firebaseAuthConfig = {
@@ -29,7 +29,8 @@ const appRoutes: Routes = [
  {path:'quote/:id', component:QuoteComponent},
  {path:'add-quote',component:AddQuoteComponent},
  {path:'edit-quote/:id', component:EditQuoteComponent},
- {path:'login', component:LoginComponent}
+ {path:'login', component:LoginComponent},
+ {path:'privacy-policy', component:PrivacyPolicyComponent}
 ]
 
 @NgModule({
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     QuoteComponent,
     AddQuoteComponent,
     EditQuoteComponent,
-    LoginComponent
+    LoginComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
